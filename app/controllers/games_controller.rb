@@ -15,6 +15,10 @@ class GamesController < ApplicationController
     render json: @game, status: 201
   end
 
+  def index
+    @games = Game.all
+  end
+
   private
 
   def game_params
